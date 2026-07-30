@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "categories": {
+      "title": "Categories",
+      "description": "Product categories in the store",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "icon": { "type": "string" },
+        "order": { "type": "number" },
+        "status": { "type": "string", "enum": ["active", "inactive"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "status"]
+    },
+    "products": {
+      "title": "Products",
+      "description": "Products available in the store",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "categoryId": { "type": "string" },
+        "categoryName": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "inStock": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["active", "inactive"] },
+        "sku": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "price", "categoryId", "status"]
+    }
+  }
+}
